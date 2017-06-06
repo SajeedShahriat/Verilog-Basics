@@ -1,0 +1,14 @@
+**********************************************************************
+git instruction:
+**********************************************************************
+1. git init
+2. git add . OR git add -A
+3. git commit -m "commit message"
+4. git remote add origin remote repository URL
+5. git push origin master
+
+**********************************************************************
+icarus verilog compilation instruction:
+**********************************************************************
+1.
+2.
