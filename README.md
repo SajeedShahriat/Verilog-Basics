@@ -5,3 +5,4 @@ Affiliation: Rochester Institute of Technology
 
 Reference(s):
 -http://www.asic-world.com
+-http://iverilog.wikia.com/wiki/Getting_Started
