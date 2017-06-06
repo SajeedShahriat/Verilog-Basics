@@ -13,7 +13,7 @@ icarus verilog compilation instruction:
 1. iverilog -o <object filename> <verilog filename>.v
 2. vvp <object filename>
 3. for multiple files (such as for a module and its test bench):
-	iverilog -o <object filename> <verilog_tb filename>.v <verilog filename>.v
+iverilog -o <object filename> <verilog_tb filename>.v <verilog filename>.v
 4. repeat step 2.
 
 **********************************************************************
@@ -27,3 +27,17 @@ for complex designs (i.e more than 2 verilog files)
 instantiating root module
 **********************************************************************
 iverilog -s main -o hello hello.v
+
+**********************************************************************
+testbench waveform (gtk waveform viewer)
+**********************************************************************
+1. add this line to the initial block of the test bench:
+	$dumpfile("test.vcd");
+	$dumpvars(0,test);
+2. Compile it:
+	iverilog -o dsn counter_tb.v counter.v
+3. Then run it:
+	vvp dsn
+4. Then look at the test.vcd waveform:
+	gtkwave test.vcd &
+Click on the 'test', then 'c1' in the top left box on GTKWAVE, then drag the signals to the Signals box.
