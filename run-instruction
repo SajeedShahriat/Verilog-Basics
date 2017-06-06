@@ -12,3 +12,18 @@ icarus verilog compilation instruction:
 **********************************************************************
 1. iverilog -o <object filename> <verilog filename>.v
 2. vvp <object filename>
+3. for multiple files (such as for a module and its test bench):
+	iverilog -o <object filename> <verilog_tb filename>.v <verilog filename>.v
+4. repeat step 2.
+
+**********************************************************************
+for complex designs (i.e more than 2 verilog files)
+**********************************************************************
+1. create a file list containing all the module names: "file_list.txt"
+2. iverilog -o <object filename> -c file_list.txt
+3. vvp <object filename>
+
+**********************************************************************
+instantiating root module
+**********************************************************************
+iverilog -s main -o hello hello.v
