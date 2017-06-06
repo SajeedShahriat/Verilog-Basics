@@ -10,5 +10,5 @@ git instruction:
 **********************************************************************
 icarus verilog compilation instruction:
 **********************************************************************
-1.
-2.
+1. iverilog -o <object filename> <verilog filename>.v
+2. vvp <object filename>
