@@ -10,7 +10,7 @@ module counter (
 	reset,		// active high synchrnous reset input
 	enable,		// active high enable signal for counter
 	counter_out	// 4 bit vector output of the counter
-) //end of port list
+); //end of port list
 
 //------------------------input ports--------------------------------
 
