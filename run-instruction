@@ -35,9 +35,9 @@ testbench waveform (gtk waveform viewer)
 	$dumpfile("<verilog_wave filename>.vcd");
 	$dumpvars(0,<verilog_tb filename>);
 2. Compile it:
-	iverilog -o dsn counter_tb.v counter.v
+	iverilog -o <waveform object filename> counter_tb.v counter.v
 3. Then run it:
-	vvp dsn
+	vvp <waveform object filename>
 4. Then look at the test.vcd waveform:
 	gtkwave <verilog_wave filename>.vcd &
 Click on the '<verilog_tb filename>', then 'c1' in the top left box on GTKWAVE, then drag the signals to the Signals box.
