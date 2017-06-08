@@ -32,12 +32,12 @@ iverilog -s main -o hello hello.v
 testbench waveform (gtk waveform viewer)
 **********************************************************************
 1. add this line to the initial block of the test bench:
-	$dumpfile("test.vcd");
-	$dumpvars(0,test);
+	$dumpfile("<verilog_wave filename>.vcd");
+	$dumpvars(0,<verilog_tb filename>);
 2. Compile it:
 	iverilog -o dsn counter_tb.v counter.v
 3. Then run it:
 	vvp dsn
 4. Then look at the test.vcd waveform:
-	gtkwave test.vcd &
-Click on the 'test', then 'c1' in the top left box on GTKWAVE, then drag the signals to the Signals box.
+	gtkwave <verilog_wave filename>.vcd &
+Click on the '<verilog_tb filename>', then 'c1' in the top left box on GTKWAVE, then drag the signals to the Signals box.

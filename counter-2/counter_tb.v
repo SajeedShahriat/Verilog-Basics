@@ -20,6 +20,10 @@ always
 
 initial
 	begin
+		
+		$dumpfile("counter_wave.vcd"); // required for gtkwaveform
+		$dumpvars(0,counter_tb); // required for gtkwaveform
+
 		$display ("time\t clk reset enable counter");
 		$monitor ("%g\t %b %b %b %b", $time, clk, reset, enable, counter_out);
 		clk = 1; //initial value of clock
